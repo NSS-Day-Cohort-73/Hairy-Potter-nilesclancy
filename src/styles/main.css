@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
-/*Typography
---------------------------------------------------------------*/
-body,
+/* Typography */
+/* body,
 button,
 input,
 select,
@@ -16,4 +15,116 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
+} */
+
+:root {
+    --background-color: #1d1d1d;
+    --accent-color: #828282; /* Warm tan for accents */
+    --text-color: #eaeaea;   /* Off-white for text */
+    --secondary-text-color: #b3b3b3; /* Muted grey for secondary text */
+    --heading-color: #7e5400; /* Warm beige for headings */
+    --border-color: #555555;
+}
+
+/* Global Styles */
+body,
+button,
+input,
+select,
+textarea {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margins for a cleaner look */
+body {
+    padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "DengXian", serif;
+    color: var(--heading-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Darkened buttons and form elements */
+button,
+input,
+select,
+textarea {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+button:hover,
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--accent-color);
+}
+
+/* Pottery List Styling */
+.potteryList {
+    background-color: #292929;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+}
+
+/* Items within the pottery list */
+.potteryList li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    list-style-type: none;
+}
+
+.potteryList li:last-child {
+    border-bottom: none;
+}
+
+/* Decorations */
+.potteryList::before {
+    content: "Pottery Catalog";
+    display: block;
+    font-size: 24px;
+    font-family: "Times New Roman", serif;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+}
+
+/* Layout and Containers */
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }

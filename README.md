@@ -120,12 +120,27 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+
+   > I chose to display the text to the browser using the innerhtml property as opposed to textcontent for this project. innerhtml displays the content of the each potObject assigned in main to a return value of the makePottery() function. Next, I created the potteryListHTML variable and assigned it to the potteryList() function to access this function --in main.js-- to pass in each html string sent to the browser's DOM. I then created the potsToDom variable and assigned it to document.queryselector() passing in ".potteryList" as an argument to access every html string in the potteryList class. Finally, I assigned potsToDOM to potteryListHTML after applying the .innerhtml property to it.
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+
+   > [Paste your video's public URL here](https://www.loom.com/share/3e7a62709cec4dd2a75e3d0a0b7a9d42?sid=14c38ec7-e624-4af4-8e84-d137f91e8703)
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+
+   > The potteryWheel module is first and foremost responsible for the initial declaration of each pottery object in the makePottery() function. The other project code isn't in the same module because this project adopts a modular design philosophy --commonly reffered to as modularization-- that allows code blocks to be more easily maintained and reused in later projects. It also aids greatly in debugging and structuring sequence diagrams, dependency graphs, and ERDs. 
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+
+   > In order to accommodate this change, I'd have add an additional conditional statement structured as such in the potteryCatalog inside of the toSellOrNotToSell function: 
+   if (pots.cracked) {
+        pots.price = 2.50
+
+        potSales.push(pots)
+    }
+    -- I added this to mu code to test it --
+    this conditional statement operates by setting any pot with the property "cracked" --as set in Kiln.js-- with the price $2.50, and pushing that given pot object into the pots[]array.
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+
+   > (https://www.loom.com/share/9a234fa5160d46a0ac94bc0b8f5baf50?sid=c86ab967-4c49-4a43-8506-aa18a427cba8)
